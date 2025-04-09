@@ -9,3 +9,6 @@ elif sys.argv[1] == "list":
         tasks = f.readlines()
         for i, task in enumerate(tasks):
             print(f"{i + 1}. {task.strip()}")
+elif sys.argv[1] == "clear":
+    open("tasks.txt", "w").close()
+    print("All tasks cleared.")
